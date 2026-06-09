@@ -1,4 +1,4 @@
-﻿---
+---
 name: pm-os-setup
 description: Scaffold a Product Management operating system - a Markdown workspace with memory that compounds over time. Creates or fills a workspace root with a Chief PM coordinator agent, specialized sub-agents (meeting-summarizer, brainstorm-partner, prd-writer, documentation-steward, skill-librarian), starter skills (summarize-notes, brainstorm, to-prd, document-product-context, manage-workspace-skills, apply-pmos-struct), an INDEX.md map in every PM OS content folder, a product-docs tree (vision, meetings, prds, decisions), plus a project README.md, AGENTS.md, CLAUDE.md, a Cursor rule, and a _setup/ subfolder for onboarding/personalization. Use when a PM or anyone wants to set up a PM OS, "PM operating system", PM workspace, agent workspace with memory, or asks to run pm-os-setup / PM-OS-Setup. After scaffolding, hands off to the workspace's _setup/ guide so the user's own agent can personalize it. Not for building application code or generic unrelated file scaffolds.
 ---
