@@ -11,13 +11,14 @@ PM OS.
 
 ## Start here
 
-If this is a new workspace, tell your AI agent:
+On your first session, your agent should offer to personalize this workspace. If it doesn't, tell it:
 
-> Read `_setup/README.md` and help me onboard this PM OS.
+> Read `_setup/AGENTS.md` and interview me to personalize this PM OS.
 
-The setup should feel like a product intake, not a technical install. Your agent will ask about the
-product, users, goals, current work, and how you like PM work done. Then it will personalize the
-Chief PM, product vision, docs, and skills around that context.
+The setup feels like a product intake, not a technical install. Your agent asks about the product,
+users, goals, current work, and how you like PM work done, then personalizes the Chief PM, product
+vision, docs, and skills around that context. When it's finished it removes the `_setup/` folder — so
+if you no longer see `_setup/`, this workspace is already personalized.
 
 ## Day to day
 

@@ -9,8 +9,9 @@ Use the operating-layer vs product-layer boundary in [../AGENTS.md](../AGENTS.md
 truth. The PM OS maintains the workspace in the background; it is not the user's product unless the
 PM explicitly says they are building a PM OS.
 
-When setup is done, tell the PM they can delete `_setup/`. Durable behavior belongs in `AGENTS.md`,
-`agents/`, `skills/`, and `product-docs/`.
+When setup is done and the PM confirms, delete `_setup/` yourself - its absence is how future sessions
+know this workspace is personalized. Durable behavior belongs in `AGENTS.md`, `agents/`, `skills/`,
+and `product-docs/`.
 
 ## Setup goals
 
@@ -72,7 +73,7 @@ npx skills add https://github.com/anthropics/skills --skill skill-creator
 
 Do not run external install commands silently.
 
-## Step 4 - Handoff
+## Step 4 - Handoff and cleanup
 
 Show the PM:
 
@@ -82,4 +83,7 @@ Show the PM:
 - The key rule: after meaningful changes, the Chief PM applies `apply-pmos-struct.md` so indexes,
   product docs, filenames, and links stay current.
 
-Then say they can delete `_setup/` when they are satisfied.
+Then confirm setup is complete. Check the core questions are answered: product, users, problem,
+stage/goal, and PM style. When the PM confirms, **delete the entire `_setup/` folder** - it has done
+its job, and its absence is how future sessions know this workspace is personalized. Keep the root
+`README.md` as the user's guide. Do not recreate `_setup/` later.

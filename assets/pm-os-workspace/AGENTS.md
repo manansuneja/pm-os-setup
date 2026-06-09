@@ -3,6 +3,26 @@
 Operating guide for any AI agent working in this workspace. Read this, then [INDEX.md](INDEX.md).
 This is a PM operating system: a workspace with memory, where context compounds over time.
 
+## First: is this workspace personalized yet?
+
+**If the `_setup/` folder still exists, this workspace has not been personalized.** It is still the
+generic scaffold. Before doing substantial PM work, offer to run setup:
+
+> Read `_setup/AGENTS.md` and interview me to personalize this PM OS.
+
+Run that intake - product context, Chief PM style, key preferences. When the interview is complete and
+the user confirms their answers:
+
+1. Apply the answers across `AGENTS.md`, `product-docs/product-vision.md`, `agents/pm-chief.md`, and any
+   skills the user gave preferences for (full steps in `_setup/AGENTS.md`).
+2. Confirm the core questions are answered: product, users, problem, stage/goal, and PM style.
+3. Delete the entire `_setup/` folder. Keep everything else, including this workspace's `README.md`
+   (the user's guide).
+
+The presence of `_setup/` is the "not personalized yet" flag; its absence means setup is done - do not
+recreate it. If the user wants to start work immediately, you may proceed, but personalize at the first
+natural opportunity so the Chief PM and product docs stop sounding generic.
+
 ## Workspace guide vs agent profiles
 
 This file is the workspace operating guide. It is not a duplicate agent profile.
