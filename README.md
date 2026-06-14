@@ -1,5 +1,7 @@
 # PM OS Setup
 
+[![skills.sh](https://skills.sh/b/manansuneja/pm-os-setup)](https://skills.sh/manansuneja/pm-os-setup)
+
 PM OS Setup creates a Product Management operating system: a structured workspace with a Chief PM
 coordinator, specialist agents, reusable skills, product memory, and automatic indexes.
 
