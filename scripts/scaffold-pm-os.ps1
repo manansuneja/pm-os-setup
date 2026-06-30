@@ -122,7 +122,7 @@ function Assert-NoExistingPmOs {
         return
     }
 
-    $pmOsMarkers = @("AGENTS.md", "INDEX.md", "agents", "skills", "product-docs")
+    $pmOsMarkers = @("AGENTS.md", "INDEX.md", "agents", "_workspace_setup_docs", "product-skills", "product-docs")
     foreach ($marker in $pmOsMarkers) {
         if (Test-Path -LiteralPath (Join-Path $WorkspaceRoot $marker)) {
             throw "The target already looks like a PM OS workspace: $WorkspaceRoot"
@@ -153,13 +153,13 @@ function Copy-TemplateContents {
         Copy-Item -LiteralPath $file.FullName -Destination $destination
 
         $isTemplateText = $file.Extension -in @(".md", ".mdc", ".txt", ".json")
-        $isSetupFile = $relative -eq "_setup/README.md" -or $relative.StartsWith("_setup/")
+        $isSetupFile = $relative -eq "_workspace_setup_docs/personalization/README.md" -or $relative.StartsWith("_workspace_setup_docs/personalization/")
         if ($isTemplateText -and -not $isSetupFile) {
             $content = Get-Content -LiteralPath $destination -Raw
             if (-not [string]::IsNullOrWhiteSpace($Name)) {
                 $content = $content.Replace("{{PROJECT_NAME}}", $Name)
             }
-            $content = $content.Replace("{{DATE}}", (Get-Date -Format "yyyy-MM-dd"))
+            $content = $content.Replace("{{DATE}}", (Get-Date -Format "MMM-dd-yyyy"))
             Set-Content -LiteralPath $destination -Value $content -NoNewline
         }
     }
@@ -180,4 +180,5 @@ Assert-NoExistingPmOs -WorkspaceRoot $workspaceRoot
 Copy-TemplateContents -TemplateRoot $templateRoot -WorkspaceRoot $workspaceRoot -Name $ProjectName
 
 Write-Output "PM OS workspace created: $workspaceRoot"
-Write-Output "Open INDEX.md first, then README.md, AGENTS.md, and _setup/README.md."
+Write-Output "Open INDEX.md first, then START_HERE.md, AGENTS.md, and _workspace_setup_docs/personalization/README.md."
+Write-Output "To personalize later, tell your agent: Customize my workspace."
